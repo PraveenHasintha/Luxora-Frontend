@@ -1,0 +1,206 @@
+.home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 68, 204, 0.3), rgba(255, 204, 0, 0.2));
+  z-index: 1;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 60px 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, #ffffff, #ffcc00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btn {
+  background: linear-gradient(135deg, #ffcc00, #ffd700);
+  padding: 15px 40px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(255, 204, 0, 0.3);
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.hero-btn:hover::before {
+  left: 100%;
+}
+
+.hero-btn:hover {
+  background: linear-gradient(135deg, #ffd700, #ffcc00);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255, 204, 0, 0.4);
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.feature {
+  max-width: 350px;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #0044cc, #ffcc00);
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #0044cc;
+}
+
+.feature h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.feature p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .hero-content {
+    padding: 40px 30px;
+    margin: 0 20px;
+  }
+  
+  .features {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
+  
+  .feature {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
