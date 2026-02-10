@@ -1,0 +1,61 @@
+# ================================
+# Dependencies
+# ================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ================================
+# Build output
+# ================================
+dist/
+build/
+
+# ================================
+# Environment files
+# ================================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# ================================
+# Cache & tooling
+# ================================
+.vite/
+.cache/
+.eslintcache
+
+# ================================
+# OS / Editor files
+# ================================
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ================================
+# Test & coverage
+# ================================
+coverage/
+*.lcov
+
+# ================================
+# Optional future additions
+# ================================
+# Storybook
+storybook-static/
+
+# Parcel
+.parcel-cache/
+
+# ================================
+# Misc
+# ================================
+*.log
